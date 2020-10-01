@@ -1,3 +1,3 @@
 # Tutorial
 Java tutorial:
-Calulcator
+Simple Calulcator with first level memory
