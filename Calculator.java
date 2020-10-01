@@ -1,7 +1,13 @@
 import java.util.*;
 
+/**
+ * This class contains the simple command line calculator with the first level memory option.
+ */
 class Calculator{
 
+    /*
+    First level memory
+     */
     private static double firstLevelMemory = 0.0;
 
     public static void main(String[] args) {
@@ -60,6 +66,11 @@ class Calculator{
         }
     }
 
+    /**
+     * Reads the first number from the user.
+     * @return First number
+     * @throws NumberFormatException If fails to convert user input into double.
+     */
     private static double getFirstNumber() throws NumberFormatException{
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the first number:");
@@ -70,6 +81,10 @@ class Calculator{
         return Double.parseDouble(b);
     }
 
+    /**
+     * Reads the second number from the user.
+     * @return Second number
+     */
     private static double getSecondNumber() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the second number:");
@@ -88,27 +103,58 @@ class Calculator{
         return temp;
     }
 
-    public static double add(double c, double d)
+    /**
+     * Add two number
+     * @param num1 First number
+     * @param num2 Second number
+     * @return Addition result
+     */
+    public static double add(double num1, double num2)
     {
-        return c+d;
+        return num1 + num2;
     }
 
-    public static double sub(double c, double d)
+    /**
+     * Sub two number
+     * @param num1 First number
+     * @param num2 Second number
+     * @return Sub result
+     */
+    public static double sub(double num1, double num2)
     {
-        return c-d;
-    }
-    public static double mul(double c, double d)
-    {
-        return c*d;
-    }
-    public static double div(double c, double d)
-    {
-        return (double) c/d;
-    }
-    public static double mod(double c, double d)
-    {
-        return c%d;
+        return num1 - num2;
     }
 
+    /**
+     * Mul two number
+     * @param num1 First number
+     * @param num2 Second number
+     * @return Mul result
+     */
+    public static double mul(double num1, double num2)
+    {
+        return num1 * num2;
+    }
 
+    /**
+     * Div two number
+     * @param num1 First number
+     * @param num2 Second number
+     * @return Div result
+     */
+    public static double div(double num1, double num2)
+    {
+        return num1 / num2;
+    }
+
+    /**
+     * Mod two number
+     * @param num1 First number
+     * @param num2 Second number
+     * @return Mod result
+     */
+    public static double mod(double num1, double num2)
+    {
+        return num1 % num2;
+    }
 }
